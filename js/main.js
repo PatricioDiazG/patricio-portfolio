@@ -34,3 +34,44 @@ animatedElements.forEach((element) => {
     observer.observe(element);
 
 });
+
+
+/* =========================================
+   NAVBAR — SECCIÓN ACTIVA
+========================================= */
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+const sectionObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                });
+
+                const activeLink = document.querySelector(
+                    `.nav-menu a[href="#${entry.target.id}"]`
+                );
+
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.4
+    }
+);
+
+sections.forEach((section) => {
+    sectionObserver.observe(section);
+});
