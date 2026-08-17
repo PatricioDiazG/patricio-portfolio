@@ -68,7 +68,7 @@ const sectionObserver = new IntersectionObserver(
 
     },
     {
-        threshold: 0.4
+      rootMargin: "-20% 0px -60% 0px"
     }
 );
 
