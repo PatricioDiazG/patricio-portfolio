@@ -157,6 +157,45 @@ img {
     color: var(--accent-light);
 }
 
+/* =========================================
+   HERO — ANIMACIÓN INICIAL
+========================================= */
+
+.hero-content {
+    animation: heroContentIn 1s ease forwards;
+}
+
+.hero-decoration {
+    animation: heroDecorationIn 1.2s ease forwards;
+}
+
+@keyframes heroContentIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heroDecorationIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
 
 /* =========================================
    HERO
