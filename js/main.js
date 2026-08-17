@@ -85,12 +85,16 @@ const heroContent = document.querySelector(".hero-content");
 
 window.addEventListener("scroll", () => {
 
+    if (!heroContent) return;
+
     const scrollPosition = window.scrollY;
 
-    if (heroContent && scrollPosition < window.innerHeight) {
+    if (scrollPosition < window.innerHeight) {
 
-        heroContent.style.transform =
-            `translateY(${scrollPosition * 0.15}px)`;
+        heroContent.style.setProperty(
+            "--parallax-y",
+            `${scrollPosition * 0.15}px`
+        );
 
     }
 
