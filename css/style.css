@@ -153,6 +153,10 @@ img {
     color: var(--text);
 }
 
+.nav-menu a.active {
+    color: var(--accent-light);
+}
+
 
 /* =========================================
    HERO
