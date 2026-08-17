@@ -163,6 +163,7 @@ img {
 
 .hero-content {
     animation: heroContentIn 1s ease forwards;
+    will-change: transform;
 }
 
 .hero-decoration {
