@@ -75,3 +75,23 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach((section) => {
     sectionObserver.observe(section);
 });
+
+
+/* =========================================
+   PARALLAX — HERO
+========================================= */
+
+const heroContent = document.querySelector(".hero-content");
+
+window.addEventListener("scroll", () => {
+
+    const scrollPosition = window.scrollY;
+
+    if (heroContent && scrollPosition < window.innerHeight) {
+
+        heroContent.style.transform =
+            `translateY(${scrollPosition * 0.15}px)`;
+
+    }
+
+});
